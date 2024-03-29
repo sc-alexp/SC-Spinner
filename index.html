@@ -5,13 +5,78 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="">
 <style>
+    body {
+        border: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: Merriweather, serif;
+        background: #f5f5f5;
+        color: #7c2529;
+        text-shadow: 1px 1px 1px black;
+    }
+
+    h2 {
+        text-align: center;
+        font-family: Nimbus Sans, sans-serif;
+        color: #7c2529;
+    }
+
+    .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    img {
+        width: 300px;
+        animation: rotation 6s infinite linear;
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    #counter {
+        font-size: 24px;
+        font-weight: 700;
+        font-family: Nimbus Sans, sans-serif;
+        z-index: 1;
+        position: relative;
+        transform: translatey(30px);
+        color: C8102E;
+        text-shadow: 1px 1px #F1BE48;
+    }
 </style>
-<script src=""></script>
-<body>
-<div class="">
- <h1>This is a Heading</h1>
- <p>This is a paragraph.</p>
- <p>This is another paragraph.</p>
+<script>
+window.onload = function() {
+    setInterval(increment, 6000);;
+};
+
+    document.getElementById('counter').innerHTML = 0;
+    function increment() {
+        var x = document.getElementById('counter').innerHTML;
+        x++;
+        document.getElementById('counter').innerHTML = x; //set span value
+    }
+</script>
+<h1>ISU ITS Solution Center</h1>
+<br><br><br>
+<div class="center" style="text-align: center;"><img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Iowa_State_Cyclones_logo.svg/2560px-Iowa_State_Cyclones_logo.svg.png"></img>
+    <p id="counter">0</p>
 </div>
-</body>
+
+<h2 style="position: fixed; width: 100%; bottom: 0;">Giving ★★★★★ customer service</h2>
+
 </html>
